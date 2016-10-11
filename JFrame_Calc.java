@@ -14,6 +14,7 @@ import java.awt.GridLayout;
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JOptionPane;
 
 public class JFrame_Calc extends JFrame {
 
@@ -299,9 +300,7 @@ public class JFrame_Calc extends JFrame {
 							nextOp = shit;
 						}
 						else {
-							System.out.println("You god damn retard! You managed to break this somehow.");
-							System.out.println("Clear the damn thing you idiot. Its broken now");
-						}
+							JOptionPane.showMessageDialog(null, "Error pls try again scrublord");
 					}
 					
 				}
