@@ -272,13 +272,13 @@ public class JFrame_Calc extends JFrame {
 		{
 			public void actionPerformed(ActionEvent arg0)
 			{
-				String[] shits = input.split(" "); // { "1", "+", "1" }
+				String[] memes = input.split(" "); // { "1", "+", "1" }
 				
 				String nextOp = "";
-				for (String shit : shits) {
+				for (String  harambe: memes) {
 					
 					try {
-						double d = Double.parseDouble(shit);
+						double d = Double.parseDouble(harambe);
 						
 						if (nextOp.equals("+")) {
 							answer += d;
@@ -293,11 +293,11 @@ public class JFrame_Calc extends JFrame {
 						}
 						
 					} catch (Exception e) {
-						if (shit.equals("+")
-								|| shit.equals("-")
-								|| shit.equals("/")
-								|| shit.equals("*")) {
-							nextOp = shit;
+						if (harambe.equals("+")
+								|| harambe.equals("-")
+								|| harambe.equals("/")
+								|| harambe.equals("*")) {
+							nextOp = harambe;
 						}
 						else {
 							JOptionPane.showMessageDialog(null, "Error pls try again scrublord");
