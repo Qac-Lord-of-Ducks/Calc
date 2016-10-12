@@ -3,6 +3,7 @@
  * @version #1 
  * @date 10/8/2016
  */
+
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import javax.swing.JFrame;
@@ -179,7 +180,7 @@ public class JFrame_Calc extends JFrame {
 		{
 			public void actionPerformed(ActionEvent arg0)
 			{
-				input = "                ";
+				input = "";
 				answer = 0;
 				answerLabel.setText(String.valueOf(input));
 			}
@@ -229,7 +230,7 @@ public class JFrame_Calc extends JFrame {
 		});
 	
 		
-		JButton multiply = new JButton("*");
+		JButton multiply = new JButton(" * ");
 		multiply.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		Op_Panel.add(multiply);
 		multiply.addActionListener(new ActionListener()
@@ -241,7 +242,7 @@ public class JFrame_Calc extends JFrame {
 			}
 		});
 		
-		JButton subtract = new JButton("-");
+		JButton subtract = new JButton(" - ");
 		subtract.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		Op_Panel.add(subtract);
 		subtract.addActionListener(new ActionListener()
@@ -253,7 +254,7 @@ public class JFrame_Calc extends JFrame {
 			}
 		});
 		
-		JButton add = new JButton("+");
+		JButton add = new JButton(" + ");
 		add.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		Op_Panel.add(add);
 		 add.addActionListener(new ActionListener()
@@ -272,13 +273,13 @@ public class JFrame_Calc extends JFrame {
 		{
 			public void actionPerformed(ActionEvent arg0)
 			{
-				String[] memes = input.split(" "); // { "1", "+", "1" }
+				String[] memes = input.split(" ");
 				
 				String nextOp = "";
-				for (String  harambe: memes) {
+				for (String pepe : memes) {
 					
 					try {
-						double d = Double.parseDouble(harambe);
+						double d = Double.parseDouble(pepe);
 						
 						if (nextOp.equals("+")) {
 							answer += d;
@@ -293,14 +294,16 @@ public class JFrame_Calc extends JFrame {
 						}
 						
 					} catch (Exception e) {
-						if (harambe.equals("+")
-								|| harambe.equals("-")
-								|| harambe.equals("/")
-								|| harambe.equals("*")) {
-							nextOp = harambe;
+						if (pepe.equals("+")
+								|| pepe.equals("-")
+								|| pepe.equals("/")
+								|| pepe.equals("*")) {
+							nextOp = pepe;
 						}
 						else {
 							JOptionPane.showMessageDialog(null, "Error pls try again scrublord");
+							setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+						}
 					}
 					
 				}
