@@ -5,6 +5,7 @@
  */
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -21,7 +22,8 @@ public class JFrame_Calc extends JFrame {
 
 	private JPanel contentPane;
 	private static String input = "";
-	static double answer = 0;
+	private static double answer = 0;
+	private static int r,g,b;
 	
 	/**
 	 * Launch the application.
@@ -74,6 +76,10 @@ public class JFrame_Calc extends JFrame {
 			{
 				input += "7";
 				answerLabel.setText(String.valueOf(input));
+				r = (int) (Math.random()*255);
+				g = (int) (Math.random()*255);
+				b = (int) (Math.random()*255);
+				num_7.setBackground(new Color(r,g,b));
 			}
 		});
 		
@@ -86,6 +92,10 @@ public class JFrame_Calc extends JFrame {
 			{
 				input += "8";
 				answerLabel.setText(String.valueOf(input));
+				r = (int) (Math.random()*255);
+				g = (int) (Math.random()*255);
+				b = (int) (Math.random()*255);
+				num_8.setBackground(new Color(r,g,b));
 			}
 		});
 		
@@ -98,6 +108,10 @@ public class JFrame_Calc extends JFrame {
 			{
 				input += "9";
 				answerLabel.setText(String.valueOf(input));
+				r = (int) (Math.random()*255);
+				g = (int) (Math.random()*255);
+				b = (int) (Math.random()*255);
+				num_9.setBackground(new Color(r,g,b));
 			}
 		});
 		
@@ -110,20 +124,13 @@ public class JFrame_Calc extends JFrame {
 			{
 				input += "4";
 				answerLabel.setText(String.valueOf(input));
+				r = (int) (Math.random()*255);
+				g = (int) (Math.random()*255);
+				b = (int) (Math.random()*255);
+				num_4.setBackground(new Color(r,g,b));		   
 			}
 		});
 		
-		JButton num_6 = new JButton(" 6 ");
-		num_6.setFont(new Font("Tahoma", Font.PLAIN, 24));
-		Num_Panel.add(num_6);
-		num_6.addActionListener(new ActionListener()
-		{
-			public void actionPerformed(ActionEvent arg0)
-			{
-				input += "6";
-				answerLabel.setText(String.valueOf(input));
-			}
-		});
 		
 		JButton num_5 = new JButton(" 5 ");
 		num_5.setFont(new Font("Tahoma", Font.PLAIN, 24));
@@ -134,6 +141,25 @@ public class JFrame_Calc extends JFrame {
 			{
 				input += "5";
 				answerLabel.setText(String.valueOf(input));
+				r = (int) (Math.random()*255);
+				g = (int) (Math.random()*255);
+				b = (int) (Math.random()*255);
+				num_5.setBackground(new Color(r,g,b));
+			}
+		});
+		JButton num_6 = new JButton(" 6 ");
+		num_6.setFont(new Font("Tahoma", Font.PLAIN, 24));
+		Num_Panel.add(num_6);
+		num_6.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent arg0)
+			{
+				input += "6";
+				answerLabel.setText(String.valueOf(input));
+				r = (int) (Math.random()*255);
+				g = (int) (Math.random()*255);
+				b = (int) (Math.random()*255);
+				num_6.setBackground(new Color(r,g,b));
 			}
 		});
 		
@@ -146,6 +172,10 @@ public class JFrame_Calc extends JFrame {
 			{
 				input += "1";
 				answerLabel.setText(String.valueOf(input));
+				r = (int) (Math.random()*255);
+				g = (int) (Math.random()*255);
+				b = (int) (Math.random()*255);
+				num_1.setBackground(new Color(r,g,b));
 			}
 		});
 		
@@ -158,6 +188,10 @@ public class JFrame_Calc extends JFrame {
 			{
 				input += "2";
 				answerLabel.setText(String.valueOf(input));
+				r = (int) (Math.random()*255);
+				g = (int) (Math.random()*255);
+				b = (int) (Math.random()*255);
+				num_2.setBackground(new Color(r,g,b));
 			}
 		});
 		
@@ -170,6 +204,10 @@ public class JFrame_Calc extends JFrame {
 			{
 				input += "3";
 				answerLabel.setText(String.valueOf(input));
+				r = (int) (Math.random()*255);
+				g = (int) (Math.random()*255);
+				b = (int) (Math.random()*255);
+				num_3.setBackground(new Color(r,g,b));
 			}
 		});
 		
@@ -183,6 +221,10 @@ public class JFrame_Calc extends JFrame {
 				input = "";
 				answer = 0;
 				answerLabel.setText(String.valueOf(input));
+				r = (int) (Math.random()*255);
+				g = (int) (Math.random()*255);
+				b = (int) (Math.random()*255);
+				clear.setBackground(new Color(r,g,b));
 			}
 		});
 		
@@ -195,6 +237,10 @@ public class JFrame_Calc extends JFrame {
 			{
 				input += "0";
 				answerLabel.setText(String.valueOf(input));
+				r = (int) (Math.random()*255);
+				g = (int) (Math.random()*255);
+				b = (int) (Math.random()*255);
+				num_0.setBackground(new Color(r,g,b));
 			}
 		});		
 		
@@ -207,6 +253,10 @@ public class JFrame_Calc extends JFrame {
 			{
 				input += ".";
 				answerLabel.setText(String.valueOf(input));
+				r = (int) (Math.random()*255);
+				g = (int) (Math.random()*255);
+				b = (int) (Math.random()*255);
+				dPoint.setBackground(new Color(r,g,b));
 			}
 		});		
 		
@@ -226,6 +276,10 @@ public class JFrame_Calc extends JFrame {
 			{
 				input += " / ";
 				answerLabel.setText(String.valueOf(input));
+				r = (int) (Math.random()*255);
+				g = (int) (Math.random()*255);
+				b = (int) (Math.random()*255);
+				divide.setBackground(new Color(r,g,b));
 			}
 		});
 	
@@ -239,6 +293,10 @@ public class JFrame_Calc extends JFrame {
 			{
 				input += " * ";
 				answerLabel.setText(String.valueOf(input));
+				r = (int) (Math.random()*255);
+				g = (int) (Math.random()*255);
+				b = (int) (Math.random()*255);
+				multiply.setBackground(new Color(r,g,b));
 			}
 		});
 		
@@ -251,6 +309,10 @@ public class JFrame_Calc extends JFrame {
 			{
 				input += " - ";
 				answerLabel.setText(String.valueOf(input));
+				r = (int) (Math.random()*255);
+				g = (int) (Math.random()*255);
+				b = (int) (Math.random()*255);
+				subtract.setBackground(new Color(r,g,b));
 			}
 		});
 		
@@ -263,6 +325,10 @@ public class JFrame_Calc extends JFrame {
 				{
 					input += " + ";
 					answerLabel.setText(String.valueOf(input));
+					r = (int) (Math.random()*255);
+					g = (int) (Math.random()*255);
+					b = (int) (Math.random()*255);
+					add.setBackground(new Color(r,g,b));
 				}
 			});
 		
@@ -273,13 +339,17 @@ public class JFrame_Calc extends JFrame {
 		{
 			public void actionPerformed(ActionEvent arg0)
 			{
-				String[] memes = input.split(" ");
+				r = (int) (Math.random()*255);
+				g = (int) (Math.random()*255);
+				b = (int) (Math.random()*255);
+				equals.setBackground(new Color(r,g,b));
+				String[] array = input.split(" ");
 				
 				String nextOp = "";
-				for (String pepe : memes) {
+				for (String string : array) {
 					
 					try {
-						double d = Double.parseDouble(pepe);
+						double d = Double.parseDouble(string);
 						
 						if (nextOp.equals("+")) {
 							answer += d;
@@ -294,11 +364,11 @@ public class JFrame_Calc extends JFrame {
 						}
 						
 					} catch (Exception e) {
-						if (pepe.equals("+")
-								|| pepe.equals("-")
-								|| pepe.equals("/")
-								|| pepe.equals("*")) {
-							nextOp = pepe;
+						if (string.equals("+")
+								|| string.equals("-")
+								|| string.equals("/")
+								|| string.equals("*")) {
+							nextOp = string;
 						}
 						else {
 							JOptionPane.showMessageDialog(null, "Error pls try again scrublord");
@@ -307,8 +377,17 @@ public class JFrame_Calc extends JFrame {
 					}
 					
 				}
-				
+				if(input.equals("2 + 2"))
+				{
+					answerLabel.setText("Fish");
+				}
+				else if(input.equals("1 + 1"))
+				{
+					answerLabel.setText("Ask Josh");
+				}
+				else{
 				answerLabel.setText(String.valueOf(answer));
+				}
 			}
 		});
 	}
