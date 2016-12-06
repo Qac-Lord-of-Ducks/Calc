@@ -371,22 +371,11 @@ public class JFrame_Calc extends JFrame {
 							nextOp = string;
 						}
 						else {
-							JOptionPane.showMessageDialog(null, "Error pls try again scrublord");
+							JOptionPane.showMessageDialog(null, "Error");
 							setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 						}
 					}
 					
-				}
-				if(input.equals("2 + 2"))
-				{
-					answerLabel.setText("Fish");
-				}
-				else if(input.equals("1 + 1"))
-				{
-					answerLabel.setText("Ask Josh");
-				}
-				else{
-				answerLabel.setText(String.valueOf(answer));
 				}
 			}
 		});
