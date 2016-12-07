@@ -68,6 +68,7 @@ public class JFrame_Calc extends JFrame {
 		Num_Panel.setLayout(new GridLayout(0, 3, 0, 0));
 		
 		JButton num_7 = new JButton(" 7 ");
+		num_7.setBackground(Color.WHITE);
 		num_7.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		Num_Panel.add(num_7);
 		 num_7.addActionListener(new ActionListener()
@@ -84,6 +85,7 @@ public class JFrame_Calc extends JFrame {
 		});
 		
 		JButton num_8 = new JButton(" 8 ");
+		num_8.setBackground(Color.WHITE);
 		num_8.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		Num_Panel.add(num_8);
 		num_8.addActionListener(new ActionListener()
@@ -100,6 +102,7 @@ public class JFrame_Calc extends JFrame {
 		});
 		
 		JButton num_9 = new JButton(" 9 ");
+		num_9.setBackground(Color.WHITE);
 		num_9.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		Num_Panel.add(num_9);
 		num_9.addActionListener(new ActionListener()
@@ -116,6 +119,7 @@ public class JFrame_Calc extends JFrame {
 		});
 		
 		JButton num_4 = new JButton(" 4 ");
+		num_4.setBackground(Color.WHITE);
 		num_4.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		Num_Panel.add(num_4);
 		num_4.addActionListener(new ActionListener()
@@ -133,6 +137,7 @@ public class JFrame_Calc extends JFrame {
 		
 		
 		JButton num_5 = new JButton(" 5 ");
+		num_5.setBackground(Color.WHITE);
 		num_5.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		Num_Panel.add(num_5);
 		num_5.addActionListener(new ActionListener()
@@ -148,6 +153,7 @@ public class JFrame_Calc extends JFrame {
 			}
 		});
 		JButton num_6 = new JButton(" 6 ");
+		num_6.setBackground(Color.WHITE);
 		num_6.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		Num_Panel.add(num_6);
 		num_6.addActionListener(new ActionListener()
@@ -164,6 +170,7 @@ public class JFrame_Calc extends JFrame {
 		});
 		
 		JButton num_1 = new JButton(" 1 ");
+		num_1.setBackground(Color.WHITE);
 		num_1.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		Num_Panel.add(num_1);
 		num_1.addActionListener(new ActionListener()
@@ -180,6 +187,7 @@ public class JFrame_Calc extends JFrame {
 		});
 		
 		JButton num_2 = new JButton(" 2 ");
+		num_2.setBackground(Color.WHITE);
 		num_2.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		Num_Panel.add(num_2);
 		num_2.addActionListener(new ActionListener()
@@ -196,6 +204,7 @@ public class JFrame_Calc extends JFrame {
 		});
 		
 		JButton num_3 = new JButton(" 3 ");
+		num_3.setBackground(Color.WHITE);
 		num_3.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		Num_Panel.add(num_3);
 		num_3.addActionListener(new ActionListener()
@@ -211,24 +220,24 @@ public class JFrame_Calc extends JFrame {
 			}
 		});
 		
-		JButton clear = new JButton("CE");
-		clear.setFont(new Font("Tahoma", Font.PLAIN, 24));
-		Num_Panel.add(clear);
-		clear.addActionListener(new ActionListener()
+		JButton dPoint = new JButton(" . ");
+		dPoint.setBackground(Color.WHITE);
+		dPoint.setFont(new Font("Tahoma", Font.PLAIN, 24));
+		Num_Panel.add(dPoint);
+		dPoint.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent arg0)
 			{
-				input = "";
-				answer = 0;
+				input += ".";
 				answerLabel.setText(String.valueOf(input));
 				r = (int) (Math.random()*255);
 				g = (int) (Math.random()*255);
 				b = (int) (Math.random()*255);
-				clear.setBackground(new Color(r,g,b));
+				dPoint.setBackground(new Color(r,g,b));
 			}
-		});
-		
+		});		
 		JButton num_0 = new JButton(" 0 ");
+		num_0.setBackground(Color.WHITE);
 		num_0.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		Num_Panel.add(num_0);
 		num_0.addActionListener(new ActionListener()
@@ -244,30 +253,33 @@ public class JFrame_Calc extends JFrame {
 			}
 		});		
 		
-		JButton dPoint = new JButton(" . ");
-		dPoint.setFont(new Font("Tahoma", Font.PLAIN, 24));
-		Num_Panel.add(dPoint);
-		dPoint.addActionListener(new ActionListener()
-		{
-			public void actionPerformed(ActionEvent arg0)
-			{
-				input += ".";
-				answerLabel.setText(String.valueOf(input));
-				r = (int) (Math.random()*255);
-				g = (int) (Math.random()*255);
-				b = (int) (Math.random()*255);
-				dPoint.setBackground(new Color(r,g,b));
-			}
-		});		
 		
 		/**
 		 * Creates panel for operation buttons
 		 */
-		JPanel Op_Panel = new JPanel();
+		JPanel Op_Panel = new JPanel();	
 		contentPane.add(Op_Panel, BorderLayout.EAST);
 		Op_Panel.setLayout(new GridLayout(0, 1, 0, 0));
 		
+		JButton delete = new JButton(" del ");
+		delete.setBackground(Color.WHITE);
+		delete.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		Op_Panel.add(delete);
+		delete.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent arg0)
+			{
+				input = input.substring(0, input.length()-1);
+				answerLabel.setText(String.valueOf(input));
+				r = (int) (Math.random()*255);
+				g = (int) (Math.random()*255);
+				b = (int) (Math.random()*255);
+				delete.setBackground(new Color(r,g,b));
+			}
+		});
+		
 		JButton divide = new JButton("   /   ");
+		divide.setBackground(Color.WHITE);
 		divide.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		Op_Panel.add(divide);
 		divide.addActionListener(new ActionListener()
@@ -285,6 +297,7 @@ public class JFrame_Calc extends JFrame {
 	
 		
 		JButton multiply = new JButton(" * ");
+		multiply.setBackground(Color.WHITE);
 		multiply.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		Op_Panel.add(multiply);
 		multiply.addActionListener(new ActionListener()
@@ -301,6 +314,7 @@ public class JFrame_Calc extends JFrame {
 		});
 		
 		JButton subtract = new JButton(" - ");
+		subtract.setBackground(Color.WHITE);
 		subtract.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		Op_Panel.add(subtract);
 		subtract.addActionListener(new ActionListener()
@@ -317,6 +331,7 @@ public class JFrame_Calc extends JFrame {
 		});
 		
 		JButton add = new JButton(" + ");
+		add.setBackground(Color.WHITE);
 		add.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		Op_Panel.add(add);
 		 add.addActionListener(new ActionListener()
@@ -334,6 +349,7 @@ public class JFrame_Calc extends JFrame {
 		
 		JButton equals = new JButton("=");
 		equals.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		equals.setBackground(Color.WHITE);
 		Op_Panel.add(equals);
 		equals.addActionListener(new ActionListener()
 		{
@@ -343,7 +359,15 @@ public class JFrame_Calc extends JFrame {
 				g = (int) (Math.random()*255);
 				b = (int) (Math.random()*255);
 				equals.setBackground(new Color(r,g,b));
-				String[] array = input.split(" ");
+				
+				String[] array;
+				
+				if(input.indexOf(' ') == 0)
+				{
+					array = input.substring(1).split(" ");
+				}else{
+					array = input.split(" ");
+				}
 				
 				String nextOp = "";
 				for (String string : array) {
@@ -375,8 +399,41 @@ public class JFrame_Calc extends JFrame {
 							setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 						}
 					}
-					
+					input = Double.toString(answer);
+					answerLabel.setText(String.valueOf(input));
 				}
+			}
+		});
+		JButton clear = new JButton("CE");
+		clear.setBackground(Color.WHITE);
+		clear.setFont(new Font("Tahoma", Font.PLAIN, 24));
+		Num_Panel.add(clear);
+		clear.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent arg0)
+			{
+				input = " ";
+				answer = 0;
+				answerLabel.setText(String.valueOf(input));
+				num_0.setBackground(Color.WHITE);
+				num_1.setBackground(Color.WHITE);
+				num_2.setBackground(Color.WHITE);
+				num_3.setBackground(Color.WHITE);
+				num_4.setBackground(Color.WHITE);
+				num_5.setBackground(Color.WHITE);
+				num_6.setBackground(Color.WHITE);
+				num_7.setBackground(Color.WHITE);
+				num_8.setBackground(Color.WHITE);
+				num_9.setBackground(Color.WHITE);
+				multiply.setBackground(Color.WHITE);
+				add.setBackground(Color.WHITE);
+				subtract.setBackground(Color.WHITE);
+				divide.setBackground(Color.WHITE);
+				equals.setBackground(Color.WHITE);
+				dPoint.setBackground(Color.WHITE);
+				clear.setBackground(Color.WHITE);
+				delete.setBackground(Color.WHITE);
+				
 			}
 		});
 	}
